@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://cdns.luatduonggia.vn/wp-content/uploads/2021/10/Chuc-nang-vai-tro-va-y-nghia-cua-thu-vien-trong-xa-hoi.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Giữ background cố định khi cuộn trang */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 204, 0, 0.9); /* Màu vàng với độ trong suốt */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 500px;
+    margin: 2rem;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    color: #333; /* Màu chữ đậm */
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.radio {
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    color: #333; /* Màu chữ đậm */
+}
+
+button {
+    background-color: #333; /* Màu đen đậm */
+    color: #fff; /* Màu chữ trắng */
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #444; /* Thay đổi màu khi hover */
+}

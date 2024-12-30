@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* xoa dau ơ dau cua the ul li */
+#theul ,.subnav{
+    list-style-type: none;
+}
+
+.clear{
+    clear: both;
+}
+/* đoạn code này dùng kkhi có đoạn văn bản muốn thành màu trắng độ ƯT số 1  */
+.text-white{
+    color: white !important;
+}
+
+#theul{
+    display: inline-block;
+}
+
+#theul > li:hover > a,
+#theul .subnav li:hover a{
+    background-color: #e1dddd;
+    color: black;
+    width: 100%;
+}
+
+#header {
+    height: 46px;
+    background-color: #f9b217;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* cho header nổi lên kiểu trục xyZ */
+    z-index: 1;
+    position: fixed;
+} 
+
+#theul li{
+    display: inline-block; /*du lieu thanh 1 khoi ve 1 dong*/
+    position: relative;
+}
+
+/* tac dong vao the a truc tiep cua the li */
+#theul > li > a {    
+    color: aliceblue; 
+    text-transform: uppercase;
+} 
+
+/* tac dong khong can truc tiep */
+#theul li a {
+    text-decoration: none; /*bo gach chan*/
+    line-height: 46px; /*can giua chieu cao*/
+    padding: 0 24px;
+    display: inline-block;
+}
+
+#theul > li:hover > .subnav {
+    display: block;
+}
+
+#theul .subnav {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.256);
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background-color: aliceblue;
+}
+
+#theul .nav-ar{
+    font-size: 14px;
+}
+
+#theul .subnav a{
+    color: black;
+    padding: 0 12px;
+}
+
+#header .logout{
+    float: right;
+}
+
+#header .btn-logout{
+    color: white;
+    line-height: 46px;
+    padding: 0 21px;
+    text-decoration: none;
+}
+
+#header .btn-logout:hover{
+    background-color: red;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+nav>ul>li{
+    padding: 0px 145px 0px 0px;
+}
+nav>ul>li:hover{
+    display: block;
+    background: pink;
+}
+.menu_left1{
+    width: 300px;
+    float: left;
+    margin-left: 15px;
+    font-weight: bold;
+    margin-top: 46px;
+}
+.menu_left1>a:hover{
+    display: inline-block;
+    background: pink;
+}
+.menu_left1>nav>ul>li:hover{
+    display: inline-block;
+    background: pink;
+}
+.footer1{
+    height: 70px;
+    background: blueviolet;
+}
+.dd1{
+    width: 600px;
+}
+.content1{
+    width: calc(100% - 300px);
+    padding: 30px;
+    margin-top: 46px;
+}
+.dd3{color: black;}
+
+.row{
+    margin-right: 15px;
+}
+
+.btn-link {
+    font-weight: 400;
+    color: #f9b217;
+    background-color: transparent;
+
+}
+
+.btn-link:hover {
+    color: #9d7315;
+}
+
+a{
+    color: #f9b217;
+}
+
+a:hover{
+    color: #9d7315;
+}
+
