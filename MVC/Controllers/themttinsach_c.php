@@ -33,7 +33,7 @@ class themttinsach_c extends controller{
                 }
                 else{
                     //gọi hàm chèn dl themloaive_ins trong ttinsach_m của model
-                    $kq=$this->ttinsach_m->themttinsach_ins($ms,$ts,$tg,$nxb,$tl,$nn,$tt);
+                    $kq=$this->ttinsach_m->ttinsach_ins($ms,$ts,$tg,$nxb,$tl,$nn,$tt);
                     if($kq){
                         echo '<script>alert("Thêm mới thành công!")</script>';    
                     }

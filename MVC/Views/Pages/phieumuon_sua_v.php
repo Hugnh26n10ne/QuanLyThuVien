@@ -24,11 +24,11 @@
             <label for="mymauser">Mã User</label>
             <input type="text" id="mymauser" class="form-control" placeholder="Mã user" name="txtmauser" value="<?php echo $row['mauser'] ?>">
             <label for="myngaymuon">Ngày Mượn</label>
-            <input type="text" id="myngaymuon" class="form-control" placeholder="Ngày mượn" name="txtngaymuon" value="<?php echo $row['ngaymuon'] ?>">
+            <input type="date" id="myngaymuon" class="form-control" placeholder="Ngày mượn" name="txtngaymuon" value="<?php echo $row['ngaymuon'] ?>">
             <label for="myngayphaitra">Ngày Phải Trả</label>
-            <input type="text" id="myngayphaitra" class="form-control" placeholder="Ngày phải trả" name="txtngayphaitra" value="<?php echo $row['ngayphaitra'] ?>">
+            <input type="date" id="myngayphaitra" class="form-control" placeholder="Ngày phải trả" name="txtngayphaitra" value="<?php echo $row['ngayphaitra'] ?>">
             <label for="myngaytra">Ngày Trả</label>
-            <input type="text" id="myngaytra" class="form-control" placeholder="Ngày trả" name="txtngaytra" value="<?php echo $row['ngaytra'] ?>">
+            <input type="date" id="myngaytra" class="form-control" placeholder="Ngày trả" name="txtngaytra" value="<?php echo $row['ngaytra'] ?>">
             
             <?php        
             }

@@ -6,31 +6,55 @@
     <title>Thêm Phiếu Mượn</title>
     <style>
         .dd2 { width: 720px; }
+        .warning { color: red; font-size: 12px; }
     </style>
 </head>
 <body>
     <form method="post" action="http://localhost/quanlythuvien/themphieumuon_c/Themmoi">
         <div class="form-group">
             <label for="mymamuontra">Mã Mượn Trả</label>
-            <input type="text" class="form-control dd2" placeholder="Mã mượn trả" name="txtmamuontra" value="<?php if(isset($data['mamuontra'])) echo $data['mamuontra'] ?>">
+            <input type="text" class="form-control dd2" placeholder="Mã mượn trả" name="txtmamuontra">
             
             <label for="mymasach">Mã Sách</label>
-            <input type="text" id="mymasach" class="form-control" placeholder="Mã sách" name="txtmasach" value="<?php if(isset($data['masach'])) echo $data['masach'] ?>">
+            <input type="text" id="mymasach" class="form-control" placeholder="Mã sách" name="txtmasach">
+            <span id="masach-warning" class="warning"></span>
             
             <label for="mymauser">Mã User</label>
-            <input type="text" id="mymauser" class="form-control" placeholder="Mã user" name="txtmauser" value="<?php if(isset($data['mauser'])) echo $data['mauser'] ?>">
+            <input type="text" id="mymauser" class="form-control" placeholder="Mã user" name="txtmauser">
             
             <label for="myngaymuon">Ngày Mượn</label>
-            <input type="text" id="myngaymuon" class="form-control" placeholder="Ngày mượn" name="txtngaymuon" value="<?php if(isset($data['ngaymuon'])) echo $data['ngaymuon'] ?>">
+            <input type="date" id="myngaymuon" class="form-control" name="txtngaymuon">
             
             <label for="myngayphaitra">Ngày Phải Trả</label>
-            <input type="text" id="myngayphaitra" class="form-control" placeholder="Ngày phải trả" name="txtngayphaitra" value="<?php if(isset($data['ngayphaitra'])) echo $data['ngayphaitra'] ?>">
-            
-            <label for="myngaytra">Ngày Trả</label>
-            <input type="text" id="myngaytra" class="form-control" placeholder="Ngày trả" name="txtngaytra" value="<?php if(isset($data['ngaytra'])) echo $data['ngaytra'] ?>">
+            <input type="date" id="myngayphaitra" class="form-control" name="txtngayphaitra">
             
             <button type="submit" class="btn btn-primary" name="btnLuu">Lưu</button>
         </div>
     </form>
+    
+    <script>
+        document.getElementById('mymasach').addEventListener('input', function() {
+            var masach = this.value;
+            var warning = document.getElementById('masach-warning');
+            if (masach) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', 'http://localhost/quanlythuvien/themphieumuon_c/checkSach', true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        if (response.tinhtrang === 0) {
+                            warning.textContent = 'Sách đã có người mượn';
+                        } else {
+                            warning.textContent = '';
+                        }
+                    }
+                };
+                xhr.send('masach=' + encodeURIComponent(masach));
+            } else {
+                warning.textContent = '';
+            }
+        });
+    </script>
 </body>
 </html>

@@ -11,6 +11,14 @@
     <script src="http://localhost/quanlythuvien/Public/Js/popper.min.js"></script>
     <script src="http://localhost/quanlythuvien/Public/Js/bootstrap.min.js"></script>
     <style>
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .content {
+        flex: 1;
+    }
     .footer {
         background-color: #f2f2f2;
         padding: 20px;
@@ -58,7 +66,6 @@
         object-fit: cover;
     }
 </style>
-
 </head>
 <body>
     <div class="logo"></div>
@@ -66,20 +73,6 @@
         <img src="http://localhost/quanlythuvien/Public/Pictures/logoqlkvc.php" alt="">
         <ul id="theul">
             <li><a href="http://localhost/quanlythuvien/">Trang chủ</a></li>
-            <li><a href="#">Loại vé</a></li>
-            <li><a href="">Tour</a></li>
-            <li><a href="">CONTACT</a></li>
-            <li>
-                <a href="">
-                    More
-                    <i class="nav-ar ti-angle-down"></i>                        
-                </a>
-                <ul class="subnav" >
-                    <li style="display: block;"><a href="">Merchandise</a></li>
-                    <li style="display: block;"><a href="">Extra</a></li>
-                    <li style="display: block;"><a href="">Media</a></li>
-                </ul>
-            </li>
         </ul>
         <!--  -->
         <div class="logout">
@@ -93,44 +86,41 @@
         </script>
         <!--  -->
     </div>
-        </div>
-        <div class="row">
-            <div class="menu_left1" style="width: 250px;">
-                <div class="list-group">
-                    <a style="background: #f8f1f1;font-weight:bold;text-align:left;" href = "#" class = "list-group-item btn btn-link" data-toggle="collapse" data-target="#target1">Quản lý tài khoản</a>
-                    <div class="collapse" id="target1">
-                        <a href = "http://localhost/quanlythuvien/doimatkhau_c" class = "list-group-item">Đổi mật khẩu</a> 
-                    </div>
-                    <a style="background: #f8f1f1; font-weight:bold;text-align:left;" href = "#" class = "list-group-item btn btn-link" data-toggle="collapse" data-target="#target2">Quản lý phiếu mượn</a>
-                    <div class="collapse" id="target2">
-                        <a href = "http://localhost/quanlythuvien/themphieumuon_c" class = "list-group-item">Thêm phiếu mượn </a>
-                        <a href = "http://localhost/quanlythuvien/danhsachphieumuon" class = "list-group-item">Danh sách phiếu mượn </a>
-                    </div>
-                    <a style="background:#f8f1f1;font-weight:bold;text-align:left;"#f8f1f1; href = "#" class = "list-group-item btn btn-link" data-toggle="collapse" data-target="#target3">Quản lý thông tin sách</a>
-                    <div class="collapse" id="target3">
-                        <a href = "http://localhost/quanlythuvien/themttinsach_c" class = "list-group-item">Thêm sách</a>
-                        <a href = "http://localhost/quanlythuvien/danhsachttinsach_c" class = "list-group-item">Danh sách thông tin sách</a>
-                    </div>
-                    <a style="background:#f8f1f1;font-weight:bold;text-align:left;"#f8f1f1; href = "#" class = "list-group-item btn btn-link" data-toggle="collapse" data-target="#target4">Quản lý bạn đọc</a>
-                    <div class="collapse" id="target4">
-                        <a href = "http://localhost/quanlythuvien/themsinhvien_c" class = "list-group-item">Thêm bạn đọc</a>
-                        <a href = "http://localhost/quanlythuvien/danhsachsinhvien" class = "list-group-item">Danh sách bạn đọc</a>
-                    </div>
+    <div class="row content">
+        <div class="menu_left1" style="width: 250px;">
+            <div class="list-group">
+                <a style="background: #f8f1f1;font-weight:bold;text-align:left;" href = "#" class = "list-group-item btn btn-link" data-toggle="collapse" data-target="#target1">Quản lý tài khoản</a>
+                <div class="collapse" id="target1">
+                    <a href = "http://localhost/quanlythuvien/doimatkhau_c" class = "list-group-item">Đổi mật khẩu</a> 
+                </div>
+                <a style="background: #f8f1f1; font-weight:bold;text-align:left;" href = "#" class = "list-group-item btn btn-link" data-toggle="collapse" data-target="#target2">Quản lý phiếu mượn</a>
+                <div class="collapse" id="target2">
+                    <a href = "http://localhost/quanlythuvien/themphieumuon_c" class = "list-group-item">Thêm phiếu mượn </a>
+                    <a href = "http://localhost/quanlythuvien/danhsachphieumuon" class = "list-group-item">Danh sách phiếu mượn </a>
+                </div>
+                <a style="background:#f8f1f1;font-weight:bold;text-align:left;" href = "#" class = "list-group-item btn btn-link" data-toggle="collapse" data-target="#target3">Quản lý thông tin sách</a>
+                <div class="collapse" id="target3">
+                    <a href = "http://localhost/quanlythuvien/themttinsach_c" class = "list-group-item">Thêm sách</a>
+                    <a href = "http://localhost/quanlythuvien/danhsachttinsach_c" class = "list-group-item">Danh sách thông tin sách</a>
+                </div>
+                <a style="background:#f8f1f1;font-weight:bold;text-align:left;" href = "#" class = "list-group-item btn btn-link" data-toggle="collapse" data-target="#target4">Quản lý bạn đọc</a>
+                <div class="collapse" id="target4">
+                    <a href = "http://localhost/quanlythuvien/themsinhvien_c" class = "list-group-item">Thêm bạn đọc</a>
+                    <a href = "http://localhost/quanlythuvien/danhsachsinhvien" class = "list-group-item">Danh sách bạn đọc</a>
                 </div>
             </div>
-            <div class="content1">
-                    <?php 
-                        include_once './MVC/Views/Pages/'.$data['page'].'.php';
-                    ?>
-            </div>
+        </div>
+        <div class="content1">
+            <?php 
+                include_once './MVC/Views/Pages/'.$data['page'].'.php';
+            ?>
         </div>
     </div>
     <div class='footer'>
         <div class="footer-left">
             <p>Giới thiệu</p>
-            <p>Giấy phép xuất bản số 110/GP - BTTTT cấp ngày 24.3.2020 © 2003-2024</P> 
+            <p>Giấy phép xuất bản số 110/GP - BTTTT cấp ngày 24.3.2020 © 2003-2024</p> 
             <!-- <p>Bản quyền thuộc về Báo Thanh Niên. Cấm sao chép dưới mọi hình thức nếu không có sự chấp thuận bằng văn bản.</p> -->
-            
         </div>
 
         <div class="footer-right">
@@ -142,7 +132,7 @@
 
         <div class="social-icons">
             <img src="https://img.icons8.com/?size=100&id=118468&format=png&color=000000" alt="Facebook Icon">
-            <img src="https://img.icons8.com/?size=100&id=32292&format=png&color=000000" alt="Instargram Icon">
+            <img src="https://img.icons8.com/?size=100&id=32292&format=png&color=000000" alt="Instagram Icon">
             <img src="https://img.icons8.com/?size=100&id=9R1sV3QvY18K&format=png&color=000000" alt="Telegram Icon">
         </div>
     </div>

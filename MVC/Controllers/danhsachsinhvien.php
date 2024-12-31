@@ -140,7 +140,7 @@ class danhsachsinhvien extends controller{
                 echo '<script>alert("Không được để trống dữ liệu !")</script>';
                 $this->view('Masterlayout',[
                     'page' => 'sinhvien_sua_v',
-                    'dulieu'=>$this->dssv->sinhvien_find($mauser,'')
+                    'dulieu'=>$this->dssv->sinhvien_findupd($mauser,'')
                 ]);
                 return;
             }else{

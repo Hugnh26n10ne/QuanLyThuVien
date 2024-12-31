@@ -1,6 +1,6 @@
 <?php 
     class ttinsach_m extends connectDB{
-        function themttinsach_ins($ms,$ts,$tg,$nxb,$tl,$nn,$tt){
+        function ttinsach_ins($ms,$ts,$tg,$nxb,$tl,$nn,$tt){
             $sql="INSERT INTO ttinsach 
             VALUES('$ms','$ts','$tg','$nxb','$tl','$nn','$tt')";
             return mysqli_query($this->con,$sql);

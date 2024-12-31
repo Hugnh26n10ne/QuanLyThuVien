@@ -132,7 +132,7 @@ class danhsachphieumuon extends controller{
                 echo '<script>alert("Không được để trống dữ liệu !")</script>';
                 $this->view('Masterlayout', [
                     'page' => 'phieumuon_sua_v',
-                    'dulieu' => $this->dspm->phieumuon_find($mamuontra)
+                    'dulieu' => $this->dspm->phieumuon_findupd($mamuontra)
                 ]);
                 return;
             }
@@ -150,6 +150,6 @@ class danhsachphieumuon extends controller{
                 'dulieu' => $this->dspm->phieumuon_find('', '')
             ]);
         } 
-    }    
-}
+    }
+}    
 ?>

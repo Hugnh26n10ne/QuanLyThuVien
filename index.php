@@ -4,7 +4,7 @@
     // Kiểm tra xem người dùng đã đăng nhập hay chưa
     if(!isset($_SESSION['user'])){
         // Chuyển hướng người dùng đến trang đăng nhập nếu chưa đăng nhập
-        header('Location: http://localhost/quanlythuvien/login.php');
+        header('Location: http://localhost/quanlythuvien/Lord.php');
         exit();
     }
 
